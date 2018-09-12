@@ -1,3 +1,17 @@
 {
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "globals": {
+        "describe": true,
+        "it": true,
+        "expect": true,
+        "jest": true,
+        "beforeEach": true,
+        "afterEach": true
+    },
+    "rules": {
+        "react/jsx-filename-extension": "off",
+        "react/destructuring-assignment": "off",
+        "import/no-named-as-default": "off"
+    }
 }
