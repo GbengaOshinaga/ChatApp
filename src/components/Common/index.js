@@ -1,3 +1,4 @@
 import Loader from './Loader';
+import InputItem from './InputItem';
 
-export default Loader;
+export { Loader, InputItem };

@@ -23,15 +23,7 @@ const AuthStack = createStackNavigator({
   SignUp: SignUpScreen,
 },
 {
-  navigationOptions: {
-    headerStyle: {
-      backgroundColor: '#000000',
-    },
-    headerTintColor: '#FFFFFF',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    },
-  },
+  headerMode: 'none',
 });
 
 export default createSwitchNavigator({

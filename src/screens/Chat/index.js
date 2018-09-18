@@ -26,8 +26,13 @@ class ChatScreen extends React.Component {
     ),
   })
 
-  componentDidMount() {
-    this.props.navigation.setParams({ logOut: this.logOut });
+  async componentDidMount() {
+    const { navigation } = this.props;
+    navigation.setParams({ logOut: this.logOut });
+    const accessToken = navigation.getParam('accessToken');
+    const user = navigation.getParam('user');
+    const userData = { user, accessToken };
+    await AsyncStorage.setItem('USER_DATA', JSON.stringify(userData));
   }
 
   logOut = async () => {
