@@ -1,13 +1,11 @@
-/* eslint-disable react/forbid-prop-types */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AsyncStorage } from 'react-native';
 
-import Loader from '../../components/Common';
+import { Loader } from '../../components/Common';
 
 const propTypes = {
-  navigation: PropTypes.any.isRequired,
+  navigation: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 class AuthLoading extends React.Component {
@@ -17,7 +15,7 @@ class AuthLoading extends React.Component {
   }
 
   checkAuthStatus = async () => {
-    const accessToken = await AsyncStorage.getItem('accessToken');
+    const accessToken = await AsyncStorage.getItem('USER_DATA');
     this.props.navigation.navigate(accessToken ? 'App' : 'Auth');
   }
 

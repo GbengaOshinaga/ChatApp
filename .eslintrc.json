@@ -12,6 +12,7 @@
     "rules": {
         "react/jsx-filename-extension": "off",
         "react/destructuring-assignment": "off",
-        "import/no-named-as-default": "off"
+        "import/no-named-as-default": "off",
+        "global-require": "off"
     }
 }
